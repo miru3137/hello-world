@@ -7,10 +7,10 @@ list(APPEND PROJECT_SRC ${MAIN_SRC})
 
 # OpenCV
 find_package(OpenCV REQUIRED)
-list(APPEND PROJECT_INCLUDE_DIR ${OpenCV_INCLUDE_DIR})
-list(APPEND PROJECT_LIB ${OpenCV_LIBS})
+list(APPEND PROJECT_INCLUDE_DIRS ${OpenCV_INCLUDE_DIRS})
+list(APPEND PROJECT_LIBS ${OpenCV_LIBS})
 
 # Program
-include_directories(${PROJECT_INCLUDE_DIR})
+include_directories(${PROJECT_INCLUDE_DIRS})
 add_executable(${PROJECT_NAME} ${PROJECT_SRC})
-target_link_libraries(${PROJECT_NAME} ${PROJECT_LIB})
+target_link_libraries(${PROJECT_NAME} ${PROJECT_LIBS})
